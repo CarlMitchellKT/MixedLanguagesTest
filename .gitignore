@@ -113,3 +113,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Manually added
+main
+rustlib/target/
