@@ -12,7 +12,8 @@ target_include_directories(MixedLanguagesTest
 target_link_libraries(MixedLanguagesTest
     PUBLIC
     PRIVATE
-        ExampleLib
+        rustlib
+
 )
 
 target_compile_options(MixedLanguagesTest

@@ -1,5 +1,5 @@
 /**===========================================================================
- * @file   example_lib.c
+ * @file   example_lib.h
  * @date   2020-02-20
  * @author carl.mitchell@keeptruckin.com
  * @brief 
@@ -18,21 +18,16 @@
  *===========================================================================
  */
 
-#include "example_lib.h"
-#include <stdio.h>
-#include <string.h>
+#ifndef LIB_INC_EXAMPLE_LIB_H
+#define LIB_INC_EXAMPLE_LIB_H
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
 
-bool not_hotdog(char possible_hotdog[static 1])
-{
-    if (NULL == possible_hotdog) {
-        printf("Impossible NULL arg: possible_hotdog.");
-        return true;
-    }
+#include <stdbool.h>
+    bool not_hotdog(const char possible_hotdog[static 1]);
 
-    if (0 == strncmp(possible_hotdog, "hotdog", strlen("hotdog")))
-    {
-        return false;
-    } else {
-        return true;
-    }
-}
+#ifdef __cplusplus
+};
+#endif /* __cplusplus */
+#endif //LIB_INC_EXAMPLE_LIB_H

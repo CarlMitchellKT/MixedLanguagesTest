@@ -1,5 +1,5 @@
 /**===========================================================================
- * @file   example_lib.h
+ * @file   lib.h
  * @date   2020-02-20
  * @author carl.mitchell@keeptruckin.com
  * @brief 
@@ -18,16 +18,14 @@
  *===========================================================================
  */
 
-#ifndef LIB_INC_EXAMPLE_LIB_H
-#define LIB_INC_EXAMPLE_LIB_H
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
+#ifndef RUSTLIB_INC_LIB_H
+#define RUSTLIB_INC_LIB_H
 
+#include <stdarg.h>
 #include <stdbool.h>
-    bool not_hotdog(char possible_hotdog[static 1]);
+#include <stdint.h>
+#include <stdlib.h>
 
-#ifdef __cplusplus
-};
-#endif /* __cplusplus */
-#endif //LIB_INC_EXAMPLE_LIB_H
+bool not_hotdog(const char* possible_hotdog);
+
+#endif //RUSTLIB_INC_LIB_H
